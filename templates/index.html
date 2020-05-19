@@ -1,0 +1,114 @@
+<!-- 
+  @Author: Edward-Praveen
+  @Date:   2020-05-19 09:51:45
+  @Last Modified by:   Edward-Praveen
+  @Last Modified time: 2020-05-19 10:58:28
+-->
+{% include 'base.html' %}
+
+{% block title %}  {% endblock %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<h3 class="table-heading">This page is dedicated to analysing the COVID 19 data. Analysis done on Day -1 Data</h3> 
+<div class="page">
+    <div class="total-cases-info"> 
+        <div class = "total-cases-child child1">
+            <span class="chill">Total Cases</span>
+            <h2>
+                {{total_data[0] | safe}}
+            </h2>
+        </div>
+        <div class = "total-cases-child child2">
+            <span class="chill">Total Cases Cured</span>
+            <h2>
+                {{total_data[1] | safe}}
+            </h2>
+        </div>
+        <div class = "total-cases-child child3">
+            <span class="chill">Total Deaths</span>
+            <h2>
+                {{total_data[2] | safe}}
+            </h2>
+        </div>
+        <div class = "total-cases-child child3">
+            <span class="chill">Active Cases</span>
+            <h2>
+                {{total_data[3] | safe}}
+            </h2>
+        </div>
+    </div>
+     
+    
+    <p class="text1"> Corona viruses are a large family of viruses which may cause illness
+        in animals or humans. In humans, several coronaviruses are known
+        to cause respiratory infections ranging from the common cold to more
+        severe diseases such as Middle East Respiratory Syndrome (MERS)
+        and Severe Acute Respiratory Syndrome (SARS). The most recently
+        discovered coronavirus causes coronavirus disease COVID-19. </p>
+    <p class="text1"> People can catch COVID-19 from others who have the virus. The
+        disease can spread from person to person through small droplets from
+        the nose or mouth which are spread when a person with COVID-19
+        coughs or exhales. These droplets land on objects and surfaces
+        around the person. Other people then catch COVID-19 by touching
+        these objects or surfaces, then touching their eyes, nose or mouth.
+        People can also catch COVID-19 if they breathe in droplets from a
+        person with COVID-19 who coughs out or exhales droplets. This is
+        why it is important to stay more than 1 meter (3 feet) away from a
+        person who is sick</p>  
+     
+    <h2 class="table-heading"><u>Real-time updates on Corona Cases</u></h2>
+    <div class="table-data">
+        {{returnList | safe}};
+    </div>
+    
+    
+    <h2 class="table-heading"><u>State-wise tally of Total Cases</u></h2>
+    <div class="plots">
+        {{figure1 | safe}}
+    </div>
+    <h2 class="table-heading"><u>State-wise tally of Total Deaths</u></h2>
+    <div class="plots">
+        {{figure2 | safe}}
+    </div>
+    <h2 class="table-heading"><u>State-wise tally of Active Cases</u></h2>
+    <div class="plots">
+        {{figure3 | safe}}
+    </div>
+    <h2 class="table-heading"><u>Recovery v/s Deaths for top 20 states</u></h2>
+    <div class="plots">
+        {{top10list | safe}}
+    </div>
+    <p class="text"> The cases in Maharashtra are high in both recovery and deaths. It indicates that either there was a delay in testing for COVID-19 due to which cases could not be controlled or there have been other comorbidities attached with the patients.  Kerala has lower deaths and higher recovery which means it has shown good record in controlling the cases and has provided good medical healthcare support. States with lesser number of both recovery and deaths are having cases only in recent times and evaluation after a few days will be able to clear the air about their condition. </p>
+    
+    <h2 class="table-heading"><u>Date-wise spread of COVID 19</u></h2>
+    <div class="plots">
+        {{dateWiseData | safe}}
+    </div>
+    <p class='text'>Use the above slider to use zoom to check the cases at each Phases of Lockdown Period</p>
+    <h2 class="table-heading"><u>Cases v/s Deaths for top 20 countries</u></h2>
+    <div class="plots">
+        {{top20list | safe}}
+    </div>
+    <p class="text">The above figure clearly shows the countries with most number of cases, which shows lack of preparedness towards a pandemic of a magnitude of COVID 19</p>
+    
+    <h2 class="table-heading"><u>Age wise distribution of COVID 19 patients - India</u></h2>
+    <div class="plots">
+        {{ageWiseData | safe}}
+    </div>
+    <p class="text">It is important to have a look at the demographic information of the population affected by COVID19 so that the target population can be identified. Contrary to other countries, the number of cases below 40 years of are considerbaly higher. Which means that youngsters are equally susceptible to the virus. This can be explained by demography of India which a young nation and most population is below 40 years of age.</p>
+    
+    <h2 class="table-heading"><u>Sex wise distribution of COVID 19 patients - India</u></h2>
+    <div class="plots">
+        {{maleFemale | safe}}
+    </div>
+    <p class="text"> Taking a look at the sex based patient data, it appears that male are at higher risks of being infected and this can be explained by their greater movements and social interactions. Data shows that 70% patients are men while 30% are women</p>
+
+</div>
+{% endblock %}
+
+{% block body %}
+    
+{% endblock %}

@@ -1,0 +1,142 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ECECEC;
+}
+.content{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(91, 202, 247);
+  width:50%;
+  margin-left: 350px;
+}
+.total-cases-info{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.text1{
+  font-size: 1.4rem;
+  padding: 20px 50px 0px 50px;
+  
+}
+.text{
+  font-size: 1.2rem;
+  color: #2E1114;
+  padding: 20px 50px 0px 50px;
+  /* padding: 20px 250px 0px 250px; */
+  
+}
+.total-cases-child{
+  padding:20px 40px;
+  justify-content: center;
+  width:250px;
+  align-items: center;
+  display:flex;
+  flex-direction:column;
+  border-radius: 8px;
+  margin: 10px 20px;
+
+}
+.child1{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #FCCD04;
+  font-size: 1.5rem;
+}
+.child2{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #FCCD04;
+  font-size: 1.5rem;
+}
+.child3{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #FCCD04;
+  font-size: 1.5rem;
+}
+child3{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  background-color: #FCCD04;
+  font-size: 1.5rem;
+}
+.chill{
+  text-align: center;
+}
+.table-heading{
+  margin-top: 50px;
+  font-size: 1.5rem;
+  color:black;
+}
+
+a, h1, h2 { 
+  color: #033252; 
+  text-align: center;
+}
+h1, h2 { 
+  margin: 20px; 
+  text-align: center;
+}
+  
+h1 { 
+  border-bottom: 2px solid #eee; 
+  text-align: center;
+}
+h2 { 
+  font-size: 1.2em; 
+  text-align: center;
+  
+}
+h3{
+  text-align: center;
+}
+.map {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+iframe {
+  border: none;
+}
+
+iframe::-webkit-scrollbar {
+  display: none;
+}
+
+.table-data {
+  margin: auto;
+  text-align: center;
+  width: 95%;
+  height: 600px;
+  overflow-y: auto;
+  padding-bottom: 30px;
+  box-shadow: 10px 10px 5px #8a8888;
+}
+.plots{
+  margin: auto;
+  text-align: center;
+  width:95%;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.plots img{
+  text-align: center;
+  margin: auto;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table.dataframe, .dataframe td, .dataframe th{
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+}
+
